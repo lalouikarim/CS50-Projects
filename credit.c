@@ -1,0 +1,82 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main()
+{
+    long int nc,x;
+    int nd,c,i,nt,p,c1,s,f,nt1,po,n;
+	printf("what's the number nc of your credit card?\n");
+	scanf("%ld",&nc);
+	x=nc;
+	nd=0;
+    nt=0;
+	do
+	{
+		c=x%10;
+		x=x/10;
+		nd=nd+1;
+	}
+	while(x!=0);
+    x=nc;
+    p=0;
+    s=0;
+    nt1=0;
+    do
+    {
+        c=x%10;
+        x=x/10;
+        nt=nt+1;
+        if(nt%2==0)
+        {
+            c=c*2;
+            do
+            {
+                c1=c%10;
+                p=p+c1;
+                c=c/10;
+            }
+            while(c!=0);
+        }
+        else
+        {
+            s=s+c;
+        }
+    }
+    while(x!=0);
+    f=p+s;
+    po=1;
+    n=0;
+    x=nc;
+    if(f%10==0)
+    {
+        do
+        {
+            c=x%10;
+            x=x/10;
+            nt1=nt1+1;
+            if(nt1==nd-1||nt1==nd)
+            {
+                  n=n+c*po;
+                  po=po*10;
+            }
+        }
+        while(x!=0);
+        if(n>=40&&n<=49&&nd>=13&&nd<=16)
+        {
+            printf("VISA\n");
+        }
+        if(nd==16&&n>=51&&n<=55)
+        {
+            printf("MASTERCARD\n");
+        }
+        if(nd==15&&(n==34||n==37))
+        {
+            printf("AMEX\n");
+        }
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
+	return 0;
+}
