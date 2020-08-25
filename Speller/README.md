@@ -1,0 +1,2 @@
+# Spell Checker
+# This program consists of two files, the first file (dictionary.h) contains the prototypes of some functions, the second one(dictionary.h) gets a dictionary_file.txt name and file_name.txt(the one that the user wants to spell check) as command line arguments, and then it should return the misspelled words(the ones that are not found in the dictionary) and the times it took the program to execute the functions
