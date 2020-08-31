@@ -1,0 +1,66 @@
+.menubar{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:black;
+}
+
+.menubar li{
+    float:right;
+}
+
+.menubar li a{
+    display:block;
+    color:white;
+    text-align: right;
+    padding:16px;
+    text-decoration:none;
+    font-size:1vw;
+}
+
+.menubar li a:hover{
+    background-color:#111111;
+}
+
+aside{
+    background-color:#111111;
+    color:white;
+    float:left;
+    height:100%;
+    position:absolute;
+    width:30%;
+}
+.content{
+    display: block;
+}
+
+.aside-right{
+    float: right;
+}
+
+.infos{
+    font-size:1vw;
+}
+h3{
+    font-size:1vw;
+}
+
+body{
+    font-size:1vw;
+}
+
+.music{
+    max-width:100%;
+}
+
+.artist{
+    font-size:2vw;
+    height:auto;
+}
+
+h2{
+    font-size:2vw;
+}
+
+
